@@ -243,6 +243,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 1c82197a55c88a549addd8e2bc6cef96, type: 3}
   targetTag: Drumstick
+  useVelocity: 1
+  minVelocity: 0
+  maxVelocity: 2
+  randomizePitch: 1
+  minPitch: 0.8
+  maxPitch: 1.2
 --- !u!82 &237821344
 AudioSource:
   m_ObjectHideFlags: 0
@@ -594,8 +600,8 @@ Camera:
   m_GameObject: {fileID: 760451939}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -832,6 +838,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: e59fd615ef2345946a62b633bef10859, type: 3}
   targetTag: Drumstick
+  useVelocity: 1
+  minVelocity: 0
+  maxVelocity: 2
+  randomizePitch: 1
+  minPitch: 0.8
+  maxPitch: 1.2
 --- !u!82 &784927282
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1380,7 +1392,7 @@ MonoBehaviour:
   m_AllowHoverHapticsWhileSelecting: 1
   m_LineType: 0
   m_BlendVisualLinePoints: 1
-  m_MaxRaycastDistance: 1000
+  m_MaxRaycastDistance: 50
   m_RayOriginTransform: {fileID: 0}
   m_ReferenceFrame: {fileID: 0}
   m_Velocity: 16
@@ -1662,6 +1674,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 7bc3d54ef8c2640458973d086d4f5914, type: 3}
   targetTag: Drumstick
+  useVelocity: 1
+  minVelocity: 0
+  maxVelocity: 2
+  randomizePitch: 1
+  minPitch: 0.8
+  maxPitch: 1.2
 --- !u!82 &1109183793
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1798,6 +1816,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 5d2d6c53005952249a60bfd2232ff010, type: 3}
   targetTag: Drumstick
+  useVelocity: 1
+  minVelocity: 0
+  maxVelocity: 2
+  randomizePitch: 1
+  minPitch: 0.8
+  maxPitch: 1.2
 --- !u!82 &1156931183
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1984,6 +2008,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100004, guid: 22696800005a12d4cb4cd5e46a9ba1b3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1291735339}
+    - targetCorrespondingSourceObject: {fileID: 100004, guid: 22696800005a12d4cb4cd5e46a9ba1b3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1291735342}
   m_SourcePrefab: {fileID: 100100000, guid: 22696800005a12d4cb4cd5e46a9ba1b3, type: 3}
 --- !u!4 &1291735336 stripped
 Transform:
@@ -2045,6 +2072,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1291735342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291735337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f98c302a2642f147bea4d02220a45de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocityAverageFrames: 5
+  angularVelocityAverageFrames: 11
+  estimateOnAwake: 1
 --- !u!1001 &1392878222
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2197,6 +2239,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100004, guid: 22696800005a12d4cb4cd5e46a9ba1b3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1533996677}
+    - targetCorrespondingSourceObject: {fileID: 100004, guid: 22696800005a12d4cb4cd5e46a9ba1b3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1533996680}
   m_SourcePrefab: {fileID: 100100000, guid: 22696800005a12d4cb4cd5e46a9ba1b3, type: 3}
 --- !u!4 &1533996674 stripped
 Transform:
@@ -2258,6 +2303,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1533996680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533996675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f98c302a2642f147bea4d02220a45de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocityAverageFrames: 5
+  angularVelocityAverageFrames: 11
+  estimateOnAwake: 1
 --- !u!1 &1584683856 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1498545485588792, guid: 8568973b327fbf848b462156cb2197d4, type: 3}
@@ -2298,6 +2358,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: f57e97181d53e0b449023c291e3ad501, type: 3}
   targetTag: Drumstick
+  useVelocity: 1
+  minVelocity: 0
+  maxVelocity: 2
+  randomizePitch: 1
+  minPitch: 0.8
+  maxPitch: 1.2
 --- !u!82 &1584683860
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2434,6 +2500,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 171a0da529c61f4498eea19994a9a353, type: 3}
   targetTag: Drumstick
+  useVelocity: 1
+  minVelocity: 0
+  maxVelocity: 2
+  randomizePitch: 1
+  minPitch: 0.8
+  maxPitch: 1.2
 --- !u!82 &1734793151
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2918,7 +2990,7 @@ MonoBehaviour:
   m_AllowHoverHapticsWhileSelecting: 1
   m_LineType: 0
   m_BlendVisualLinePoints: 1
-  m_MaxRaycastDistance: 1000
+  m_MaxRaycastDistance: 50
   m_RayOriginTransform: {fileID: 0}
   m_ReferenceFrame: {fileID: 0}
   m_Velocity: 16
@@ -3200,6 +3272,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 50bb75a7ae81f1142a13d8fa26b0bf53, type: 3}
   targetTag: Drumstick
+  useVelocity: 1
+  minVelocity: 0
+  maxVelocity: 2
+  randomizePitch: 1
+  minPitch: 0.8
+  maxPitch: 1.2
 --- !u!82 &2081711383
 AudioSource:
   m_ObjectHideFlags: 0
