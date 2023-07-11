@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3670234725183342981}
   - component: {fileID: 3645462215637752425}
   - component: {fileID: 3652801187078085881}
+  - component: {fileID: 6807389556594988042}
   m_Layer: 0
   m_Name: High Hat Top
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6807389556594988042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3667830307525810719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61617124ce317bb4197868055603471f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  assignedTime: 0

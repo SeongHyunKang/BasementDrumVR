@@ -389,9 +389,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2258fa6eea5557e498ca0b0296384a4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteRestriction: 0
+  noteRestriction: 9
   input: 0
-  notePrefab: {fileID: 0}
+  notePrefab: {fileID: 6721930581591769199, guid: f491770a8e4def74fa89bc11529fbbe5, type: 3}
   timeStamps: []
 --- !u!1 &273650603
 GameObject:
@@ -420,7 +420,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 3fa09636374c5fb4381a5f52e8199dd9, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2158,9 +2158,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2258fa6eea5557e498ca0b0296384a4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteRestriction: 0
+  noteRestriction: 7
   input: 0
-  notePrefab: {fileID: 0}
+  notePrefab: {fileID: 355533502789393892, guid: 04a5a777892ebc444b650f5af8a10ed8, type: 3}
   timeStamps: []
 --- !u!1001 &1291735335
 PrefabInstance:
@@ -2379,9 +2379,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2258fa6eea5557e498ca0b0296384a4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteRestriction: 0
+  noteRestriction: 5
   input: 0
-  notePrefab: {fileID: 0}
+  notePrefab: {fileID: 6721930581591769199, guid: f491770a8e4def74fa89bc11529fbbe5, type: 3}
   timeStamps: []
 --- !u!1001 &1392878222
 PrefabInstance:
@@ -2476,19 +2476,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 273650604}
   lanes:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 2021595422}
+  - {fileID: 1781609083}
+  - {fileID: 1559701908}
+  - {fileID: 1308309472}
+  - {fileID: 1204462283}
+  - {fileID: 271898759}
   songDelayInSeconds: 0
-  marginOfError: 0
+  marginOfError: 0.07
   inputDelayInMilliSeconds: 0
-  fileLocation: 
-  noteTime: 0
-  noteSpawnY: 0
-  noteTapY: 0
+  fileLocation: test.mid
+  noteTime: 1
+  noteSpawnY: 7
+  noteTapY: -3
 --- !u!4 &1522480411
 Transform:
   m_ObjectHideFlags: 0
@@ -2717,9 +2717,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2258fa6eea5557e498ca0b0296384a4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteRestriction: 0
+  noteRestriction: 4
   input: 0
-  notePrefab: {fileID: 0}
+  notePrefab: {fileID: 6721930581591769199, guid: f491770a8e4def74fa89bc11529fbbe5, type: 3}
   timeStamps: []
 --- !u!1 &1584683856 stripped
 GameObject:
@@ -3086,9 +3086,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2258fa6eea5557e498ca0b0296384a4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteRestriction: 0
+  noteRestriction: 2
   input: 0
-  notePrefab: {fileID: 0}
+  notePrefab: {fileID: 6721930581591769199, guid: f491770a8e4def74fa89bc11529fbbe5, type: 3}
   timeStamps: []
 --- !u!1 &2021595420
 GameObject:
@@ -3115,7 +3115,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2021595420}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.529, y: 1.607, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3136,7 +3136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noteRestriction: 0
   input: 0
-  notePrefab: {fileID: 0}
+  notePrefab: {fileID: 3667830307525810719, guid: 0961aa21ca069be42be0975a2785bf4f, type: 3}
   timeStamps: []
 --- !u!1 &2050242851
 GameObject:
