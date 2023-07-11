@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6373488026695090446}
   m_Layer: 0
-  m_Name: Graffiti
+  m_Name: TitleGraffiti
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
