@@ -1,17 +1,9 @@
-//======= Copyright (c) Valve Corporation, All rights reserved. ===============
-//
-// Purpose: Estimates the velocity of an object based on change in position
-//
-//=============================================================================
-
 using UnityEngine;
 using System.Collections;
 
 public class VelocityEstimator : MonoBehaviour
 {
-    [Tooltip("How many frames to average over for computing velocity")]
     public int velocityAverageFrames = 5;
-    [Tooltip("How many frames to average over for computing angular velocity")]
     public int angularVelocityAverageFrames = 11;
 
     public bool estimateOnAwake = false;
