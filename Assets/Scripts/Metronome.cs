@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Metronome : MonoBehaviour
 {
-    [SerializeField] private AudioSource audioSource;
-    [SerializeField] private AudioClip[] metronomeBeats;
+    public AudioSource audioSource;
+    public AudioClip[] metronomeBeats;
 
     private int currentBeatIndex = 0;
 
@@ -22,5 +22,15 @@ public class Metronome : MonoBehaviour
         currentBeatIndex = (currentBeatIndex + 1) % metronomeBeats.Length;
 
         Invoke(nameof(PlayNextBeat), audioSource.clip.length);
+    }
+
+    public void PlayBeat(int beatIndex)
+    {
+        if (beatIndex >= 0 && beatIndex < metronomeBeats.Length)
+        {
+            audioSource.Stop();
+            audioSource.clip = metronomeBeats[beatIndex];
+            audioSource.Play();
+        }
     }
 }
