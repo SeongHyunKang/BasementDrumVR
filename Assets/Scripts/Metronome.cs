@@ -9,17 +9,12 @@ public class Metronome : MonoBehaviour
 
     private int currentBeatIndex = 0;
 
-    private void Start()
-    {
-        PlayNextBeat();
-    }
-
     private void PlayNextBeat()
     {
         audioSource.clip = metronomeBeats[currentBeatIndex];
         audioSource.Play();
 
-        currentBeatIndex = (currentBeatIndex + 1) % metronomeBeats.Length;
+        //currentBeatIndex = (currentBeatIndex + 1) % metronomeBeats.Length;
 
         Invoke(nameof(PlayNextBeat), audioSource.clip.length);
     }
