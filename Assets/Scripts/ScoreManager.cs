@@ -7,7 +7,8 @@ public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager instance;
     public AudioSource hitSFX;
-    public AudioSource missSFX;
+    public GameObject hitEffect;
+    //public AudioSource missSFX;
     public TextMeshProUGUI scoreText;
     static int comboScore;
     void Start()
@@ -19,17 +20,17 @@ public class ScoreManager : MonoBehaviour
     public static void Hit()
     {
         comboScore += 1;
-        instance.hitSFX.Play();
+        //instance.hitSFX.Play();
     }
 
     public static void Miss()
     {
         comboScore = 0;
-        instance.missSFX.Play();
+        //instance.missSFX.Play();
     }
 
     void Update()
     {
-        scoreText.text = comboScore.ToString();
+        scoreText.text = "Combo : " + comboScore.ToString();
     }
 }

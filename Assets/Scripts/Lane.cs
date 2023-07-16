@@ -7,29 +7,31 @@ using UnityEngine;
 public class Lane : MonoBehaviour
 {
     public Melanchall.DryWetMidi.MusicTheory.NoteName noteRestriction;
-    public KeyCode input;
     public GameObject notePrefab;
     List<Note> notes = new List<Note>();
     public List<double> timeStamps = new List<double>();
+    public Saber saber;
+    public GameObject hitEffectPrefab;
 
     int spawnIndex = 0;
     int inputIndex = 0;
     void Start()
     {
-        
+        saber = GetComponent<Saber>();
     }
 
     public void SetTimeStamps(Melanchall.DryWetMidi.Interaction.Note[] array)
     {
-        foreach(var note in array)
+        foreach (var note in array)
         {
-            if(note.NoteName == noteRestriction)
+            if (note.NoteName == noteRestriction)
             {
                 var metricTimeSpan = TimeConverter.ConvertTo<MetricTimeSpan>(note.Time, SongManager.midiFile.GetTempoMap());
                 timeStamps.Add((double)metricTimeSpan.Minutes * 60f + metricTimeSpan.Seconds + (double)metricTimeSpan.Milliseconds / 1000f);
             }
         }
     }
+
     void Update()
     {
         if (spawnIndex < timeStamps.Count)
@@ -49,13 +51,16 @@ public class Lane : MonoBehaviour
             double marginOfError = SongManager.instance.marginOfError;
             double audioTime = SongManager.GetAudioSourceTime() - (SongManager.instance.inputDelayInMilliSeconds / 1000.0);
 
-            if(Input.GetKeyDown(input))
+            if (saber.HasHit())
             {
                 if (Math.Abs(audioTime - timeStamp) < marginOfError)
                 {
                     ScoreManager.Hit();
                     print($"Hit on {inputIndex} note");
-                    Destroy(notes[inputIndex].gameObject);
+
+                    Instantiate(hitEffectPrefab, notes[inputIndex].transform.position, Quaternion.identity);
+
+                    Destroy(notes[inputIndex].gameObject, 1f);
                     inputIndex++;
                 }
                 else
@@ -63,6 +68,7 @@ public class Lane : MonoBehaviour
                     print($"Hit inaccurate on {inputIndex} note");
                 }
             }
+
             if (timeStamp + marginOfError <= audioTime)
             {
                 ScoreManager.Miss();

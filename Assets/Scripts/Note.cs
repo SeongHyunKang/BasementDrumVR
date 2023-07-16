@@ -9,6 +9,7 @@ public class Note : MonoBehaviour
     void Start()
     {
         timeInstantiated = SongManager.GetAudioSourceTime();
+        transform.Rotate(transform.forward, 90 * Random.Range(0, 4));
     }
 
     void Update()
