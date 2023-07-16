@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Drumstick
+  - Red
+  - Green
+  - Blue
   layers:
   - Default
   - TransparentFX
@@ -13,8 +16,8 @@ TagManager:
   - Water
   - UI
   - 
-  - 
-  - 
+  - Blue
+  - Red
   - 
   - 
   - 
