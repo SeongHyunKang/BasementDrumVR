@@ -9,7 +9,7 @@ public class Note : MonoBehaviour
     void Start()
     {
         timeInstantiated = SongManager.GetAudioSourceTime();
-        transform.Rotate(transform.forward, 90 * Random.Range(0, 4));
+        transform.Rotate(0, -90, 90 * Random.Range(0, 4));
     }
 
     void Update()
@@ -23,7 +23,7 @@ public class Note : MonoBehaviour
         }
         else
         {
-            transform.localPosition = Vector3.Lerp(Vector3.up * SongManager.instance.noteSpawnY, Vector3.up * SongManager.instance.noteDespawnY, t);
+            transform.localPosition = Vector3.Lerp(Vector3.right * SongManager.instance.noteSpawnX, Vector3.right * SongManager.instance.noteDespawnX, t);
         }
     }
 }
