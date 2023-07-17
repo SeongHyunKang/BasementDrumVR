@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/CountForHeyMama.unity
     guid: d3411e73885034e4092a95172eed5b24
   - enabled: 1
-    path: Assets/Scenes/HeyMama.unity
-    guid: 22726b12d54999a47a17f6ac97d8a346
+    path: Assets/Scenes/HeyMamaMutated.unity
+    guid: dffd9bfa53bb9d04b96061c59a912657
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 4ec6fe13655f5254e9ae945a31c6cb19, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 3a0716345916bfd46b3a0f2d3943dd09, type: 2}
